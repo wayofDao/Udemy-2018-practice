@@ -3,11 +3,15 @@ var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 var liItems = document.querySelectorAll("li")
 	
-for (let i=0; i < liItems.length; i++){
-liItems[i].appendChild((document.createTextNode(" ")));
-liItems[i].appendChild(addDelBtn());
-}
+// for (let i=0; i < liItems.length; i++){
+// liItems[i].appendChild((document.createTextNode(" ")));
+// liItems[i].appendChild(addDelBtn());
+// }
+liItems.forEach(apnd);
 
+function apnd(item) {
+	item.appendChild(addDelBtn());
+}	
 function addDelBtn() {
 let btn = document.createElement("button");
 btn.appendChild(document.createTextNode("del"));
